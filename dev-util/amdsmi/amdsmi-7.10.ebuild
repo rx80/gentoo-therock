@@ -46,7 +46,7 @@ PATCHES=(
 	"${FILESDIR}/${PN}-7.0.2-unbundle-gtest.patch"
 	"${FILESDIR}/${PN}-7.1.1-libdrm-compat.patch"
 	"${FILESDIR}/${PN}-7.10-fix-for-builtin-kernel-module.patch"
-	"${FILESDIR}/${PN}-7.10-amdsmi-7.10-fix-tests.patch"
+	"${FILESDIR}/${PN}-7.10-fix-tests.patch"
 )
 
 CONFIG_CHECK="~HSA_AMD ~DRM_AMDGPU"
