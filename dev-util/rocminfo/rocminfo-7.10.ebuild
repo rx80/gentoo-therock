@@ -8,7 +8,7 @@ inherit cmake python-r1
 
 SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-7.10/rocminfo.tar.gz -> ${P}.tar.gz"
 KEYWORDS="~amd64"
-S="${WORKDIR}/rocminfo"
+S="${WORKDIR}/${PN}"
 
 DESCRIPTION="ROCm Application for Reporting System Info"
 HOMEPAGE="https://github.com/ROCm/rocm-systems/tree/develop/projects/rocminfo"
