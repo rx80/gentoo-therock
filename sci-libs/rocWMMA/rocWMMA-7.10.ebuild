@@ -42,7 +42,7 @@ BDEPEND="
 "
 
 PATCHES=(
-	"${FILESDIR}"/${PN}-6.1.1-no-test-install.patch
+	"${FILESDIR}"/${PN}-7.10-no-test-install.patch
 )
 
 src_prepare() {

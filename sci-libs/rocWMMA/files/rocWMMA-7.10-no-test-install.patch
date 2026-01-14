@@ -1,0 +1,37 @@
+--- a/test/CMakeLists.txt    2026-01-14 23:13:42.585997075 +0100
++++ b/test/CMakeLists.txt    2026-01-14 23:14:34.109438799 +0100
+@@ -152,11 +152,6 @@
+   add_test(NAME ${TEST_TARGET} COMMAND ${TEST_TARGET})
+   set_property(TEST ${TEST_TARGET} PROPERTY SKIP_REGULAR_EXPRESSION "no ROCm-capable device" "unsupported host device")
+
+-  rocm_install_targets(
+-    TARGETS ${TEST_TARGET}
+-    COMPONENT tests
+-  )
+-
+   get_target_property(EXE_NAME ${TEST_TARGET} RUNTIME_OUTPUT_NAME)
+   if(EXE_NAME STREQUAL "EXE_NAME-NOTFOUND")
+       get_target_property(EXE_NAME ${TEST_TARGET} OUTPUT_NAME)
+@@ -191,22 +186,3 @@
+ add_subdirectory(gemm)
+ add_subdirectory(unit)
+ add_subdirectory(dlrm)
+-
+-rocm_install(
+-    FILES "${INSTALL_TEST_FILE}"
+-    DESTINATION "${CMAKE_INSTALL_BINDIR}/${PROJECT_NAME}"
+-    COMPONENT tests
+-    RENAME "CTestTestfile.cmake"
+-)
+-rocm_install(
+-    FILES "${INSTALL_SMOKE_TEST_FILE}"
+-    DESTINATION "${CMAKE_INSTALL_BINDIR}/${PROJECT_NAME}/smoke"
+-    COMPONENT tests
+-    RENAME "CTestTestfile.cmake"
+-)
+-rocm_install(
+-    FILES "${INSTALL_REGRESSION_TEST_FILE}"
+-    DESTINATION "${CMAKE_INSTALL_BINDIR}/${PROJECT_NAME}/regression"
+-    COMPONENT tests
+-    RENAME "CTestTestfile.cmake"
+-)
