@@ -1,0 +1,20 @@
+--- a/CMakeLists.txt	2026-01-14 01:59:55.467667041 +0100
++++ b/CMakeLists.txt	2026-01-14 02:00:44.044460598 +0100
+@@ -112,11 +112,17 @@
+   set(BUILD_THUNK_VIRTIO OFF)
+ endif()
+ 
++if (BUILD_HSAKMT)
+ add_rocm_subdir(libhsakmt "${THUNK_DEFINITIONS}")
+ set_target_properties(hsakmt PROPERTIES
+                                 ARCHIVE_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/libhsakmt/archive"
+                                 LIBRARY_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/libhsakmt/lib"
+                                 RUNTIME_OUTPUT_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}/libhsakmt/runtime")
++else()
++  find_package(hsakmt REQUIRED)
++  add_library(hsakmt ALIAS hsakmt::hsakmt)
++endif()
++
+ if (WIN32)
+ set_target_properties(hsakmt PROPERTIES
+                       CXX_STANDARD 20
