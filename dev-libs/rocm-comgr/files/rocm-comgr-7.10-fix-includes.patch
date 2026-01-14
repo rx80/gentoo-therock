@@ -1,0 +1,29 @@
+--- comgr/src/comgr-compiler.cpp
++++ comgr/src/comgr-compiler.cpp
+@@ -27,7 +27,7 @@
+ #include "clang/Driver/DriverDiagnostic.h"
+ #include "clang/Driver/Job.h"
+ #include "clang/Driver/OffloadBundler.h"
+-#include "clang/Driver/Options.h"
++#include "clang/Options/Options.h"
+ #include "clang/Driver/Tool.h"
+ #include "clang/Frontend/CompilerInstance.h"
+ #include "clang/Frontend/FrontendDiagnostic.h"
+@@ -79,7 +79,7 @@
+ using namespace llvm::sys;
+ using namespace clang;
+ using namespace clang::driver;
+-using namespace clang::driver::options;
++using namespace options;
+ using namespace COMGR::TimeStatistics;
+
+ namespace COMGR {
+@@ -1126,7 +1126,7 @@
+   SmallString<256> ClangBinaryPath(env::getLLVMPath());
+   sys::path::append(ClangBinaryPath, "bin", "clang");
+
+-  std::string ClangResourceDir = Driver::GetResourcesPath(ClangBinaryPath);
++  std::string ClangResourceDir = GetResourcesPath(ClangBinaryPath);
+
+   SmallString<256> DeviceLibPath(ClangResourceDir);
+   sys::path::append(DeviceLibPath, "lib64");
