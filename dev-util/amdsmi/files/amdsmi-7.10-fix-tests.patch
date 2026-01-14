@@ -1,0 +1,41 @@
+--- a/tests/amd_smi_test/functional/hw_topology_read.cc   2025-09-27 00:33:01.000000000 +0200
++++ b/tests/amd_smi_test/functional/hw_topology_read.cc  2026-01-14 05:13:46.076468862 +0100
+@@ -20,6 +20,7 @@
+  * THE SOFTWARE.
+  */
+
++#include <iomanip>
+ #include <cinttypes>
+ #include <cstdint>
+
+--- a/tests/amd_smi_test/functional/frequencies_read.cc   2025-09-27 00:33:01.000000000 +0200
++++ b/tests/amd_smi_test/functional/frequencies_read.cc  2026-01-14 05:19:47.856863263 +0100
+@@ -20,6 +20,7 @@
+  * THE SOFTWARE.
+  */
+
++#include <iomanip>
+ #include <cstdint>
+ #include <iostream>
+ #include <string>
+
+--- a/tests/amd_smi_test/functional/computepartition_read_write.cc        2025-09-27 00:33:01.000000000 +0200
++++ n/tests/amd_smi_test/functional/computepartition_read_write.cc       2026-01-14 05:21:00.066161618 +0100
+@@ -20,6 +20,7 @@
+  * THE SOFTWARE.
+  */
+
++#include <iomanip>
+ #include <cstdint>
+ #include <unistd.h>
+
+--- a/tests/amd_smi_test/test_base.cc     2025-09-27 00:33:01.000000000 +0200
++++ b/tests/amd_smi_test/test_base.cc    2026-01-14 05:23:55.038252932 +0100
+@@ -20,6 +20,7 @@
+  * THE SOFTWARE.
+  */
+
++#include <iomanip>
+ #include <gtest/gtest.h>
+
+ #include <cassert>

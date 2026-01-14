@@ -1,0 +1,9 @@
+--- a/amdsmi_cli/amdsmi_init.py      2025-09-27 00:33:01.000000000 +0200
++++ b/amdsmi_cli/amdsmi_init.py     2026-01-14 05:03:48.448264138 +0100
+@@ -58,6 +58,8 @@
+     if amd_gpu_status_file.exists():
+         if amd_gpu_status_file.read_text(encoding="ascii").strip() == "live":
+             return True
++    elif Path("/sys/module/amdgpu").exists():
++        return True
+     return False
