@@ -16,8 +16,8 @@ SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/
 S="${WORKDIR}/${MY_PN}"
 
 LICENSE="BSD-2 BSD"
-KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
+KEYWORDS="~amd64"
 IUSE="benchmark sparse test"
 REQUIRED_USE="${ROCM_REQUIRED_USE}"
 

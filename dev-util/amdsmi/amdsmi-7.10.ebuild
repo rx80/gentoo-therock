@@ -24,8 +24,8 @@ SRC_URI="
 S="${WORKDIR}/amdsmi-therock-${PV}"
 
 LICENSE="MIT"
-KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
+KEYWORDS="~amd64"
 IUSE="test"
 RESTRICT="!test? ( test )"
 

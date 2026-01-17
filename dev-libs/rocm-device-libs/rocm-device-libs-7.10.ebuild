@@ -14,10 +14,10 @@ DESCRIPTION="Radeon Open Compute Device Libraries"
 HOMEPAGE="https://github.com/ROCm/llvm-project/tree/amd-staging/amd/device-libs"
 SRC_URI="https://github.com/ROCm/llvm-project/archive/therock-${PV}.tar.gz -> ${MY_P}.tar.gz"
 S="${WORKDIR}/${MY_P}/${components[0]}"
-KEYWORDS="~amd64"
 
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"
+KEYWORDS="~amd64"
 IUSE="test"
 RESTRICT="!test? ( test )"
 

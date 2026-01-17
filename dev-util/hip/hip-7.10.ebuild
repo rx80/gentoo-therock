@@ -25,9 +25,9 @@ S="${WORKDIR}/clr/"
 TEST_PV=${PV}
 TEST_S="${WORKDIR}/hip-tests/catch"
 HIP_S="${WORKDIR}/hip"
-SLOT="0/$(ver_cut 1-2)"
 
 LICENSE="MIT"
+SLOT="0/$(ver_cut 1-2)"
 KEYWORDS="~amd64"
 
 IUSE="debug +hip numa opencl test video_cards_amdgpu video_cards_nvidia"

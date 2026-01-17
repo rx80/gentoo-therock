@@ -11,8 +11,8 @@ SRC_URI="https://github.com/ROCm/rocm-cmake/archive/therock-${PV}.tar.gz -> ${P}
 S="${WORKDIR}/rocm-cmake-therock-${PV}"
 
 LICENSE="MIT"
-KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
+KEYWORDS="~amd64"
 RESTRICT="test"
 
 DOCS=( CHANGELOG.md LICENSE README.md )

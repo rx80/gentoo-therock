@@ -15,8 +15,8 @@ SRC_URI="https://github.com/ROCm/llvm-project/archive/therock-${PV}.tar.gz -> ${
 S="${WORKDIR}/${MY_P}/${components[0]}"
 
 LICENSE="Apache-2.0 MIT"
-KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
+KEYWORDS="~amd64"
 IUSE="debug test"
 RESTRICT="!test? ( test )"
 

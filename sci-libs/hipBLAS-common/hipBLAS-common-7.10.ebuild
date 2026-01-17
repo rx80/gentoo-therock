@@ -13,7 +13,7 @@ SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/
 S="${WORKDIR}/${MY_PN}"
 
 LICENSE="MIT"
-KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
+KEYWORDS="~amd64"
 
 BDEPEND="dev-build/rocm-cmake"

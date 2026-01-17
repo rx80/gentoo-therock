@@ -9,12 +9,12 @@ DESCRIPTION="Library that provides ROCm release version and install path informa
 HOMEPAGE="https://github.com/ROCm/rocm-systems/tree/develop/projects/rocm-core"
 SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-${PV}/rocm-core.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${PN}"
-KEYWORDS="~amd64"
 
 RDEPEND="!<dev-util/hip-7.0"
 
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"
+KEYWORDS="~amd64"
 
 src_configure() {
 		# NOTE: Fails in utils.cmake:108 for versions like 7.10 that do not contain a patch number

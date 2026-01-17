@@ -13,8 +13,8 @@ SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-7.10/roc
 S="${WORKDIR}/${PN}"
 
 LICENSE="UoI-NCSA"
-KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
+KEYWORDS="~amd64"
 
 RDEPEND="dev-libs/rocr-runtime:${SLOT}
 	${PYTHON_DEPS}"

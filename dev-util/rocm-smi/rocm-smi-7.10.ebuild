@@ -13,8 +13,8 @@ SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-${PV}/ro
 S="${WORKDIR}/rocm-smi-lib"
 
 LICENSE="MIT"
-KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
+KEYWORDS="~amd64"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}"

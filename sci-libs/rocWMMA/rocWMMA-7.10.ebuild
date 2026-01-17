@@ -14,8 +14,8 @@ SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/
 S="${WORKDIR}/${MY_PN}"
 
 LICENSE="MIT"
-KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
+KEYWORDS="~amd64"
 
 IUSE_TARGETS=( gfx908 gfx90a gfx942 gfx950 gfx1100 gfx1101 gfx1102 gfx1151 gfx1200 gfx1201 )
 IUSE_TARGETS=( "${IUSE_TARGETS[@]/#/amdgpu_targets_}" )
