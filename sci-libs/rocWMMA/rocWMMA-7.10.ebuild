@@ -12,9 +12,9 @@ DESCRIPTION="library for accelerating mixed precision matrix multiply-accumulate
 HOMEPAGE="https://github.com/ROCm/rocWMMA"
 SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_PN}"
-KEYWORDS="~amd64"
 
 LICENSE="MIT"
+KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
 
 IUSE_TARGETS=( gfx908 gfx90a gfx942 gfx950 gfx1100 gfx1101 gfx1102 gfx1151 gfx1200 gfx1201 )

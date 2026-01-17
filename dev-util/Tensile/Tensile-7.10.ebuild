@@ -16,10 +16,10 @@ DESCRIPTION="A tool for creating a benchmark-driven GEMMs and tensor contraction
 HOMEPAGE="https://rocm.docs.amd.com/projects/Tensile/en/latest/src/index.html"
 SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_PN}"
-KEYWORDS="~amd64"
 
 SLOT="0/$(ver_cut 1-2)"
 LICENSE="MIT"
+KEYWORDS="~amd64"
 IUSE="client test"
 REQUIRED_USE="client? ( ${ROCM_REQUIRED_USE} )"
 

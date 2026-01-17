@@ -17,11 +17,11 @@ DESCRIPTION="AMD's library for BLAS on ROCm"
 HOMEPAGE="https://github.com/ROCm/rocm-libraries/tree/develop/projects/rocblas"
 SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_PN}"
-KEYWORDS="~amd64"
-
-SLOT="0/$(ver_cut 1-2)"
 
 LICENSE="MIT BSD"
+KEYWORDS="~amd64"
+SLOT="0/$(ver_cut 1-2)"
+
 IUSE="benchmark hipblaslt roctracer test"
 RESTRICT="!test? ( test )"
 REQUIRED_USE="${ROCM_REQUIRED_USE}"

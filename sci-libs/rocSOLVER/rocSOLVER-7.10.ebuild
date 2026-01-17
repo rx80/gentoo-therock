@@ -14,9 +14,9 @@ HOMEPAGE="https://github.com/ROCm/rocm-libraries/tree/develop/projects/rocsolver
 # ROCm/rocSOLVER 7.1.0 release is incorrect - https://github.com/ROCm/rocm-libraries/issues/2582
 SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_PN}"
-KEYWORDS="~amd64"
 
 LICENSE="BSD-2 BSD"
+KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
 IUSE="benchmark sparse test"
 REQUIRED_USE="${ROCM_REQUIRED_USE}"

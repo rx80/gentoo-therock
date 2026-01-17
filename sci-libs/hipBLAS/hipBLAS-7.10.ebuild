@@ -13,12 +13,13 @@ DESCRIPTION="ROCm BLAS marshalling library"
 HOMEPAGE="https://github.com/ROCm/rocm-libraries/tree/develop/projects/hipblas"
 SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_PN}"
-KEYWORDS="~amd64"
 
-REQUIRED_USE="${ROCM_REQUIRED_USE}"
 
 LICENSE="MIT"
+KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
+
+REQUIRED_USE="${ROCM_REQUIRED_USE}"
 IUSE="rocsolver"
 
 RDEPEND="

@@ -11,9 +11,9 @@ DESCRIPTION="ROCm Application for Reporting System Info"
 HOMEPAGE="https://github.com/ROCm/rocm-systems/tree/develop/projects/rocminfo"
 SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-7.10/rocminfo.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${PN}"
-KEYWORDS="~amd64"
 
 LICENSE="UoI-NCSA"
+KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
 
 RDEPEND="dev-libs/rocr-runtime:${SLOT}

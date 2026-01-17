@@ -11,9 +11,9 @@ DESCRIPTION="ROCm System Management Interface Library"
 HOMEPAGE="https://github.com/ROCm/rocm-systems/tree/develop/projects/rocm-smi-lib"
 SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-${PV}/rocm-smi-lib.tar.gz  -> rocm-smi-${PV}.tar.gz"
 S="${WORKDIR}/rocm-smi-lib"
-KEYWORDS="~amd64"
 
 LICENSE="MIT"
+KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 

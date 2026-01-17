@@ -22,9 +22,9 @@ SRC_URI="
 	https://github.com/amd/esmi_ib_library/archive/refs/tags/${ESMI_PN}-${ESMI_PV}.tar.gz
 "
 S="${WORKDIR}/amdsmi-therock-${PV}"
-KEYWORDS="~amd64"
 
 LICENSE="MIT"
+KEYWORDS="~amd64"
 SLOT="0/$(ver_cut 1-2)"
 IUSE="test"
 RESTRICT="!test? ( test )"
