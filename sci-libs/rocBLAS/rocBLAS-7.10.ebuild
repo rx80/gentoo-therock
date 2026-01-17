@@ -3,22 +3,21 @@
 
 EAPI=8
 
+inherit cmake docs edo flag-o-matic multiprocessing rocm llvm-r1
+
+DESCRIPTION="AMD's library for BLAS on ROCm"
+HOMEPAGE="https://github.com/ROCm/rocm-libraries/tree/develop/projects/rocblas"
+SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${MY_PN}"
+KEYWORDS="~amd64"
+
 DOCS_BUILDER="doxygen"
 DOCS_DIR="docs/doxygen"
 DOCS_DEPEND="media-gfx/graphviz"
 LLVM_COMPAT=( 22 )
 ROCM_VERSION=${PV}
 MY_PN=${PN,,}
-
-inherit cmake docs edo flag-o-matic multiprocessing rocm llvm-r1
-
-DESCRIPTION="AMD's library for BLAS on ROCm"
-HOMEPAGE="https://github.com/ROCm/rocm-libraries/tree/develop/projects/rocblas"
-
-SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}/${MY_PN}"
 SLOT="0/$(ver_cut 1-2)"
-KEYWORDS="~amd64"
 
 LICENSE="MIT BSD"
 IUSE="benchmark hipblaslt roctracer test"

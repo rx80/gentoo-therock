@@ -3,16 +3,15 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..14} python3_13t )
-
 inherit cmake linux-info optfeature python-r1
 
 DESCRIPTION="ROCm System Management Interface Library"
 HOMEPAGE="https://github.com/ROCm/rocm-systems/tree/develop/projects/rocm-smi-lib"
 SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-${PV}/rocm-smi-lib.tar.gz  -> rocm-smi-${PV}.tar.gz"
-
-KEYWORDS="~amd64"
 S="${WORKDIR}/rocm-smi-lib"
+KEYWORDS="~amd64"
+
+PYTHON_COMPAT=( python3_{11..14} python3_13t )
 
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"

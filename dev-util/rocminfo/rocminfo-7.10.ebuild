@@ -3,15 +3,15 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{11..14} python3_13t )
 inherit cmake python-r1
-
-SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-7.10/rocminfo.tar.gz -> ${P}.tar.gz"
-KEYWORDS="~amd64"
-S="${WORKDIR}/${PN}"
 
 DESCRIPTION="ROCm Application for Reporting System Info"
 HOMEPAGE="https://github.com/ROCm/rocm-systems/tree/develop/projects/rocminfo"
+SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-7.10/rocminfo.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${PN}"
+KEYWORDS="~amd64"
+
+PYTHON_COMPAT=( python3_{11..14} python3_13t )
 LICENSE="UoI-NCSA"
 SLOT="0/$(ver_cut 1-2)"
 

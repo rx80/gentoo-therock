@@ -3,13 +3,6 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..14} )
-ROCM_SKIP_GLOBALS=1
-inherit cmake linux-info python-r1 rocm
-
-ESMI_PN=esmi_pkg_ver
-ESMI_PV=4.3
-
 DESCRIPTION="AMD System Management Interface for managing and monitoring GPUs"
 HOMEPAGE="
 	https://github.com/ROCm/amdsmi
@@ -20,11 +13,19 @@ SRC_URI="
 	https://github.com/amd/esmi_ib_library/archive/refs/tags/${ESMI_PN}-${ESMI_PV}.tar.gz
 "
 S="${WORKDIR}/amdsmi-therock-${PV}"
+KEYWORDS="~amd64"
+
+PYTHON_COMPAT=( python3_{10..14} )
+ROCM_SKIP_GLOBALS=1
+inherit cmake linux-info python-r1 rocm
+
+ESMI_PN=esmi_pkg_ver
+ESMI_PV=4.3
+
 ESMI_S="${WORKDIR}/esmi_ib_library-${ESMI_PN}-${ESMI_PV}"
 
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"
-KEYWORDS="~amd64"
 
 IUSE="test"
 RESTRICT="!test? ( test )"

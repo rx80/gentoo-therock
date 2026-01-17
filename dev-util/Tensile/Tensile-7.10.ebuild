@@ -3,20 +3,21 @@
 
 EAPI=8
 
+inherit cmake distutils-r1 llvm-r1 prefix rocm
+
+DESCRIPTION="A tool for creating a benchmark-driven GEMMs and tensor contractions code"
+HOMEPAGE="https://rocm.docs.amd.com/projects/Tensile/en/latest/src/index.html"
+SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/${MY_PN}"
+KEYWORDS="~amd64"
+
 PYTHON_COMPAT=( python3_{10..13} )
 DISTUTILS_USE_PEP517=setuptools
 ROCM_VERSION=${PV}
 LLVM_COMPAT=( 22 )
 MY_PN=${PN,,}
-inherit cmake distutils-r1 llvm-r1 prefix rocm
 
-DESCRIPTION="A tool for creating a benchmark-driven GEMMs and tensor contractions code"
-HOMEPAGE="https://rocm.docs.amd.com/projects/Tensile/en/latest/src/index.html"
-
-SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
-S="${WORKDIR}/${MY_PN}"
 SLOT="0/$(ver_cut 1-2)"
-KEYWORDS="~amd64"
 
 LICENSE="MIT"
 IUSE="client test"

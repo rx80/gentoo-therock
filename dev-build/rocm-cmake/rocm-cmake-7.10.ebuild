@@ -5,12 +5,12 @@ EAPI=8
 
 inherit cmake
 
-SRC_URI="https://github.com/ROCm/rocm-cmake/archive/therock-${PV}.tar.gz -> ${P}.tar.gz"
-KEYWORDS="~amd64"
-S="${WORKDIR}/rocm-cmake-therock-${PV}"
-
 DESCRIPTION="Radeon Open Compute CMake Modules"
 HOMEPAGE="https://github.com/ROCm/rocm-cmake"
+SRC_URI="https://github.com/ROCm/rocm-cmake/archive/therock-${PV}.tar.gz -> ${P}.tar.gz"
+S="${WORKDIR}/rocm-cmake-therock-${PV}"
+KEYWORDS="~amd64"
+
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"
 RESTRICT="test"

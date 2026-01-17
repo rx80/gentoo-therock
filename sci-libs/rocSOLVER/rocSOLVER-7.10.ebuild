@@ -3,21 +3,19 @@
 
 EAPI=8
 
-ROCM_VERSION=${PV}
-MY_PN=${PN,,}
-
 inherit cmake edo flag-o-matic rocm
 
 DESCRIPTION="Implementation of a subset of LAPACK functionality on the ROCm platform"
 HOMEPAGE="https://github.com/ROCm/rocm-libraries/tree/develop/projects/rocsolver"
-
 # ROCm/rocSOLVER 7.1.0 release is incorrect - https://github.com/ROCm/rocm-libraries/issues/2582
 SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_PN}"
+KEYWORDS="~amd64"
 
+ROCM_VERSION=${PV}
+MY_PN=${PN,,}
 LICENSE="BSD-2 BSD"
 SLOT="0/$(ver_cut 1-2)"
-KEYWORDS="~amd64"
 
 IUSE="benchmark sparse test"
 REQUIRED_USE="${ROCM_REQUIRED_USE}"

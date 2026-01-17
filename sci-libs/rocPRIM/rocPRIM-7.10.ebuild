@@ -3,18 +3,18 @@
 
 EAPI=8
 
-ROCM_VERSION=${PV}
 inherit cmake flag-o-matic rocm
-MY_PN=${PN,,}
 
 DESCRIPTION="HIP parallel primitives for developing performant GPU-accelerated code on ROCm"
 HOMEPAGE="https://github.com/ROCm/rocm-libraries/tree/develop/projects/rocprim"
 SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz  -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_PN}"
+KEYWORDS="~amd64"
 
+ROCM_VERSION=${PV}
+MY_PN=${PN,,}
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"
-KEYWORDS="~amd64"
 IUSE="benchmark test"
 REQUIRED_USE="
 	benchmark? ( ${ROCM_REQUIRED_USE} )
