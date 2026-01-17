@@ -3,16 +3,17 @@
 
 EAPI=8
 
+ROCM_SKIP_GLOBALS=1
+
 inherit cmake rocm
 
+MY_PN=${PN,,}
 DESCRIPTION="library for accelerating mixed precision matrix multiply-accumulate operations"
 HOMEPAGE="https://github.com/ROCm/rocWMMA"
 SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/${MY_PN}.tar.gz -> ${P}.tar.gz"
 S="${WORKDIR}/${MY_PN}"
 KEYWORDS="~amd64"
 
-ROCM_SKIP_GLOBALS=1
-MY_PN=${PN,,}
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"
 

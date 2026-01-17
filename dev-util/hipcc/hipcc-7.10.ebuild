@@ -3,18 +3,17 @@
 
 EAPI=8
 
+LLVM_COMPAT=( 22 )
 inherit cmake llvm-r1
+
+MY_P=llvm-project-therock-${PV}
+components=( "amd/hipcc" )
 
 DESCRIPTION="Radeon Open Compute hipcc"
 HOMEPAGE="https://github.com/ROCm/llvm-project/tree/amd-staging/amd/hipcc"
 SRC_URI="https://github.com/ROCm/llvm-project/archive/therock-${PV}.tar.gz -> ${MY_P}.tar.gz"
 S="${WORKDIR}/${MY_P}/${components[0]}"
 KEYWORDS="~amd64"
-
-LLVM_COMPAT=( 22 )
-
-MY_P=llvm-project-therock-${PV}
-components=( "amd/hipcc" )
 
 LICENSE="Apache-2.0 MIT"
 SLOT="0/$(ver_cut 1-2)"

@@ -3,6 +3,7 @@
 
 EAPI=8
 
+ROCM_SKIP_GLOBALS=1
 inherit cmake edo flag-o-matic rocm
 
 DESCRIPTION="Radeon Open Compute OpenCL Compatible Runtime"
@@ -11,7 +12,6 @@ SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-${PV}/cl
 S="${WORKDIR}/clr/"
 KEYWORDS="~amd64"
 
-ROCM_SKIP_GLOBALS=1
 LICENSE="Apache-2.0 MIT"
 SLOT="0/$(ver_cut 1-2)"
 IUSE="debug numa test"

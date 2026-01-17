@@ -3,6 +3,8 @@
 
 EAPI=8
 
+LLVM_COMPAT=( 22 )
+ROCM_SKIP_GLOBALS=1
 inherit cmake flag-o-matic linux-info llvm-r1 rocm
 
 DESCRIPTION="Radeon Open Compute Thunk Interface"
@@ -11,8 +13,6 @@ SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-7.10/roc
 S="${WORKDIR}/rocr-runtime/libhsakmt"
 KEYWORDS="~amd64"
 
-LLVM_COMPAT=( 22 )
-ROCM_SKIP_GLOBALS=1
 CONFIG_CHECK="~HSA_AMD ~HMM_MIRROR ~ZONE_DEVICE ~DRM_AMDGPU ~DRM_AMDGPU_USERPTR"
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"

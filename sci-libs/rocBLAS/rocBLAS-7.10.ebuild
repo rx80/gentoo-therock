@@ -3,7 +3,15 @@
 
 EAPI=8
 
+LLVM_COMPAT=( 22 )
+ROCM_VERSION=${PV}
+DOCS_BUILDER="doxygen"
+DOCS_DIR="docs/doxygen"
+DOCS_DEPEND="media-gfx/graphviz"
+
 inherit cmake docs edo flag-o-matic multiprocessing rocm llvm-r1
+
+MY_PN=${PN,,}
 
 DESCRIPTION="AMD's library for BLAS on ROCm"
 HOMEPAGE="https://github.com/ROCm/rocm-libraries/tree/develop/projects/rocblas"
@@ -11,12 +19,6 @@ SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/
 S="${WORKDIR}/${MY_PN}"
 KEYWORDS="~amd64"
 
-DOCS_BUILDER="doxygen"
-DOCS_DIR="docs/doxygen"
-DOCS_DEPEND="media-gfx/graphviz"
-LLVM_COMPAT=( 22 )
-ROCM_VERSION=${PV}
-MY_PN=${PN,,}
 SLOT="0/$(ver_cut 1-2)"
 
 LICENSE="MIT BSD"

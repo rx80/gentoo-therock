@@ -3,6 +3,8 @@
 
 EAPI=8
 
+LLVM_COMPAT=( 22 )
+
 inherit cmake flag-o-matic llvm-r1
 
 DESCRIPTION="Radeon Open Compute Runtime"
@@ -11,7 +13,6 @@ SRC_URI="https://github.com/ROCm/rocm-systems/releases/download/therock-7.10/roc
 S="${WORKDIR}/${PN}"
 KEYWORDS="~amd64"
 
-LLVM_COMPAT=( 22 )
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"
 IUSE="debug"

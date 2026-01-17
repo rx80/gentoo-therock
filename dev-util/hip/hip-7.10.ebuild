@@ -3,6 +3,11 @@
 
 EAPI=8
 
+ROCM_SKIP_GLOBALS=1
+LLVM_COMPAT=( 22 )
+DOCS_BUILDER="doxygen"
+DOCS_DEPEND="media-gfx/graphviz"
+
 inherit cmake docs flag-o-matic llvm-r1 rocm
 
 DESCRIPTION="C++ Heterogeneous-Compute Interface for Portability"
@@ -18,10 +23,6 @@ SRC_URI="
 S="${WORKDIR}/clr/"
 KEYWORDS="~amd64"
 
-DOCS_BUILDER="doxygen"
-DOCS_DEPEND="media-gfx/graphviz"
-ROCM_SKIP_GLOBALS=1
-LLVM_COMPAT=( 22 )
 TEST_PV=${PV}
 TEST_S="${WORKDIR}/hip-tests/catch"
 HIP_S="${WORKDIR}/hip"

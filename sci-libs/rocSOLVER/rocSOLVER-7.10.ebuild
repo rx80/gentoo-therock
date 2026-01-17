@@ -3,7 +3,11 @@
 
 EAPI=8
 
+ROCM_VERSION=${PV}
+
 inherit cmake edo flag-o-matic rocm
+
+MY_PN=${PN,,}
 
 DESCRIPTION="Implementation of a subset of LAPACK functionality on the ROCm platform"
 HOMEPAGE="https://github.com/ROCm/rocm-libraries/tree/develop/projects/rocsolver"
@@ -12,11 +16,8 @@ SRC_URI="https://github.com/ROCm/rocm-libraries/releases/download/therock-${PV}/
 S="${WORKDIR}/${MY_PN}"
 KEYWORDS="~amd64"
 
-ROCM_VERSION=${PV}
-MY_PN=${PN,,}
 LICENSE="BSD-2 BSD"
 SLOT="0/$(ver_cut 1-2)"
-
 IUSE="benchmark sparse test"
 REQUIRED_USE="${ROCM_REQUIRED_USE}"
 

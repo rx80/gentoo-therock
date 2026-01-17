@@ -3,18 +3,18 @@
 
 EAPI=8
 
+LLVM_COMPAT=( 22 )
+
 inherit cmake flag-o-matic llvm-r1
+
+MY_P=llvm-project-therock-${PV}
+components=( "amd/device-libs" )
 
 DESCRIPTION="Radeon Open Compute Device Libraries"
 HOMEPAGE="https://github.com/ROCm/llvm-project/tree/amd-staging/amd/device-libs"
 SRC_URI="https://github.com/ROCm/llvm-project/archive/therock-${PV}.tar.gz -> ${MY_P}.tar.gz"
 S="${WORKDIR}/${MY_P}/${components[0]}"
 KEYWORDS="~amd64"
-
-LLVM_COMPAT=( 22 )
-
-MY_P=llvm-project-therock-${PV}
-components=( "amd/device-libs" )
 
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"
