@@ -14,7 +14,7 @@ RDEPEND="!<dev-util/hip-7.0"
 
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"
-KEYWORDS="~amd64"
+#KEYWORDS="~amd64"
 
 src_configure() {
 		# NOTE: Fails in utils.cmake:108 for versions like 7.10 that do not contain a patch number
