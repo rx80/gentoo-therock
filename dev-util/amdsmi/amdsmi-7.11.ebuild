@@ -21,7 +21,7 @@ SRC_URI="
     https://github.com/ROCm/rocm-systems/releases/download/therock-${PV}/amdsmi.tar.gz -> ${P}.tar.gz
 	https://github.com/amd/esmi_ib_library/archive/refs/tags/${ESMI_PN}-${ESMI_PV}.tar.gz
 "
-S="${WORKDIR}/amdsmi-therock-${PV}"
+S="${WORKDIR}/amdsmi"
 
 LICENSE="MIT"
 SLOT="0/$(ver_cut 1-2)"
